@@ -42,6 +42,10 @@ sudo fio test.fio
 
 ### 5.2.3 PyNVMe3
 
+PyNVMe3 是专为NVMe SSD开发和测试工程师设计更全面的工具。PyNVMe不单面向**性能测试**，更可以实现**功能**，**协议**，**注错**，**可靠性**，**压力**，**功耗**，**安全**，**带外管理**，**固件白盒**等测试。
+
+PyNVMe3 提供了一个类似于fio的ioworker模块，用来构造各种IO负载。ioworker基于SPDK的用户态NVMe驱动实现，能比fio获得更高的性能和更低的延迟。ioworker还提供Python API接口，便于Python脚本实现测试，并收集处理可视化测试数据。
+
 ----
 
 ## 5.3 专业测试平台

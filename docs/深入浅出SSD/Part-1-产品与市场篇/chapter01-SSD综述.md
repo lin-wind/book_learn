@@ -29,7 +29,7 @@ SSD 的硬件实体主要包括以下几大部分：
 
 SSD 三大核心技术排列如下：**控制器 (Controller)**，**闪存 (NAND Flash)**，**固件 (Firmware)**
 
-
+![1766636062448](image/chapter01-SSD综述/1766636062448.png)
 
 
 截至书中日期，闪存主要供应商：三星(Samsung),SK海力士(SK Hynix),铠侠（Kioxia，西数（WD），长存(YMTC)

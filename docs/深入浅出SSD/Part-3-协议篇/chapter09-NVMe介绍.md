@@ -21,9 +21,27 @@ NVMe 有三宝——Submission Queue（SQ，提交队列）、Completion Queue�
 
 ![1766634162191](image/chapter09-NVMe介绍/1766634162191.png)
 
+NVMe处理命令步骤
+- 主机写命令到SQ
+- 主机写SQ的DB，通知SSD取指
+- SSD收到通知后，到SQ取指
+- SSD执行命令
+- 指令执行完成，SSD往CQ写指令执行结果
+- SSD发中断通知主机指令完成
+- 收到中断，主机处理CQ，查看指令完成状态
+- 主机处理完CQ中的指令执行结果，通过DB回复SSD
+![1767191510215](image/chapter09-NVMe介绍/1767191510215.png)
+
+
 ---
 
 ## 9.3 吉祥三宝SQ、CQ和DB
+
+- SQ (Submission Queue)：提交队列，主机发送指令。
+- CQ (Completion Queue)：完成队列，SSD 返回结果。
+- Admin 队列：固定 1 对，负责管理工作。
+- I/O 队列：最高可达 65535 对，负责数据传输。
+
 
 
 ---
